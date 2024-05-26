@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+.one h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    font-family: 'Exo', sans-serif;
+  }
+  .one h1:before {
+    width: 28px;
+    height: 5px;
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    margin-left: -14px;
+    background-color: #b80000;
+  }
+  .one h1:after {
+    width: 100px;
+    height: 1px;
+    display: block;
+    content: "";
+    position: relative;
+    margin-top: 25px;
+    left: 50%;
+    margin-left: -50px;
+    background-color: #b80000;
+  }
+
+  .container {
+    display: flex;
+    width: 1040px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+  .card-container {
+    margin-bottom: 3rem;
+}
+
+.empty {
+    text-align: center;
+    margin-top: 3em;
+    font-size: larger;
+    font-family: 'Exo', sans-serif;
+}
+
+.btn--form {
+    padding: .5rem 2.5rem;
+    font-size: .95rem;
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    background: #111;
+    border-radius: remy(35px);
+    margin-right: 10px;
+
+    &:focus,
+    &:hover {
+        background: lighten(#111, 13%);
+    }
+}
+
+

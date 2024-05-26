@@ -1,0 +1,224 @@
+// Remy function
+
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+@function remy($value) {
+    @return ($value / 16px) * 1rem;
+}
+
+body {
+    font: 100% / 1.414 "Open Sans", "Roboto", arial, sans-serif;
+    background-image: url(https://images.pexels.com/photos/6707628/pexels-photo-6707628.jpeg);
+	background-size: cover;
+	-webkit-filter: blur(5px);
+}
+
+a,
+[type="submit"] {
+    transition: all .25s ease-in;
+}
+
+.signup__container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    transform: translateY(-50%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: remy(800px);
+    height: remy(480px);
+    border-radius: remy(3px);
+    background-image: url(https://images.pexels.com/photos/6707628/pexels-photo-6707628.jpeg);
+    box-shadow: 0px remy(3px) remy(7px) rgba(0, 0, 0, .25);
+}
+
+.signup__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .76);
+}
+
+.container__child {
+    width: 50%;
+    height: 100%;
+    color: #fff;
+}
+
+.signup__thumbnail {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: url(https://media.istockphoto.com/photos/blurred-background-modern-kitchen-and-dinning-room-in-house-with-picture-id955951212?b=1&k=20&m=955951212&s=170667a&w=0&h=yBnWySnlkcJdhF459eTrolTL-DMmLG96PLOUl3qAQnI=);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+.thumbnail__logo,
+.thumbnail__content,
+.thumbnail__links {
+    position: relative;
+    z-index: 2;
+}
+
+.thumbnail__logo {
+    align-self: flex-start;
+}
+
+.logo__shape {
+    fill: #fff;
+}
+
+.logo__text {
+    display: inline-block;
+    font-family: 'Exo', sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    vertical-align: bottom;
+}
+
+.thumbnail__content {
+    align-self: center;
+    font-family: 'Exo', sans-serif;
+    font-weight: 1000;
+    padding: 1rem;
+
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    color: #50503d;
+    margin: 0 !important;
+    text-align: left;
+}
+
+.heading--primary {
+    font-size: 1.999rem;
+}
+
+.heading--secondary {
+    font-size: 1.2rem;
+}
+
+.thumbnail__links {
+    align-self: flex-end;
+    width: 100%;
+}
+
+.thumbnail__links a {
+    font-size: 1rem;
+    color: #fff;
+
+    &:focus,
+    &:hover {
+        color: rgba(255, 255, 255, .5);
+    }
+}
+
+.signup__form {
+    padding: 2.5rem;
+    background: #fafafa;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+label {
+    font-size: .85rem;
+    font-family: 'Exo', sans-serif;
+    text-transform: uppercase;
+    color: #ccc;
+}
+.form-control {
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: .0625rem solid #ccc;
+    border-radius: .25rem;
+}
+.form-control {
+    background-color: transparent;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+
+    &:focus {
+        border-color: #111;
+    }
+}
+
+[type="text"] {
+    color: #111;
+}
+
+[type="password"] {
+    color: #111;
+}
+
+.btn--form {
+    padding: .5rem 2.5rem;
+    font-size: .95rem;
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    background: #111;
+    border-radius: remy(35px);
+
+    &:focus,
+    &:hover {
+        background: lighten(#111, 13%);
+    }
+}
+
+.signup__link {
+    font-size: 1rem;
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    text-decoration: underline;
+    color: #999;
+    margin-left: 50px;
+
+    &:focus,
+    &:hover {
+        color: darken(#999, 13%);
+    }
+}
+
+.grad {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65)));
+    /* Chrome,Safari4+ */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+::placeholder {
+    color: rgba(106, 50, 5, 0.308);
+}
+
+.is-invalid {
+    background-color: rgba(216, 183, 167, 0.27);
+}
+
+.invalid-feedback {
+    margin-left: 5px;
+    font-size: 0.7rem;
+    font-family: 'Exo', sans-serif;
+    color: rgba(126, 16, 4, 0.685);
+}

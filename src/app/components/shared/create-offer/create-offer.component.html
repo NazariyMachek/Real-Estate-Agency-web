@@ -1,0 +1,58 @@
+<div class="one">
+    <h1>Let's create new beautiful offer!</h1>
+</div>
+
+  <div id="profile-edit-area">
+    <div>
+    <div id="edit-area-left">
+        <table>
+          <tbody>
+           
+            <tr>
+              <td class="edit-title">price:</td>
+              <td><input type="text" class="profileInputBox" [(ngModel)]="offer.price" /></td>
+            </tr>
+            <tr>
+              <td class="edit-title">square:</td>
+              <td><input type="text" class="profileInputBox" [(ngModel)]="offer.square" /></td>
+            </tr>
+            <tr>
+              <td class="edit-title">offer type:</td>
+              <td>
+                <select class="profileInputBox" (change)="setSelectedOfferType($event)">
+                    <option value="">Choose offer type</option>
+                    <option *ngFor="let type of offerTypes" [ngValue]="type">{{type}}</option>
+              </select></td>
+            </tr>
+            <tr>
+                <td class="edit-title">buy type:</td>
+                <td>
+                    <select class="profileInputBox" (change)="setSelectedBuyType($event)">
+                        <option value="">Choose buy type</option>
+                        <option *ngFor="let type of buyTypes" [ngValue]="type">{{type}}</option>
+                  </select></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+    <div id="edit-area-right">
+      <table>
+          <tbody>
+            <tr>
+                <td class="edit-title">title:</td>
+                <td><input type="text" class="profileInputBox" [(ngModel)]="offer.title" /></td>
+              </tr>
+              <tr>
+                <td class="edit-title ">description:</td>
+                <td><input type="text" class="profileInputBox description" [(ngModel)]="offer.description" /></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+</div>
+  </div>
+
+  <div id="profile-edit-save">
+    <button id="editSave" (click)="createNewOffer()">Create</button>
+    <button id="editSave" (click)="goToHomePage()">Cancel</button>
+  </div>

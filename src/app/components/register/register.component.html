@@ -1,0 +1,75 @@
+<div class="signup__container">
+
+    <div class="container__child signup__thumbnail">
+        <div class="background"></div>
+        <div class="thumbnail__content text-center">
+            <h1 class="heading--primary">RealEstate</h1>
+            <h2 class="heading--secondary">Are you ready to join the elite?</h2>
+        </div>
+    </div>
+    <div class="container__child signup__form">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" formControlName="firstName" class="form-control" placeholder="Andrew"
+                    [ngClass]="{ 'is-invalid': submitted && registerForm.controls['firstName'].invalid }" required/>
+                <div *ngIf="submitted && registerForm.controls['firstName'].invalid" class="invalid-feedback">
+                    <div *ngIf="registerForm.controls['firstName'].invalid">First Name is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="middleName">Middle Name</label>
+                <input type="text" name="middleName" formControlName="middleName" class="form-control" placeholder="Yuriyovych"
+                    [ngClass]="{ 'is-invalid': submitted && registerForm.controls['middleName'].invalid }" required/>
+                <div *ngIf="submitted && registerForm.controls['middleName'].invalid" class="invalid-feedback">
+                    <div *ngIf="registerForm.controls['middleName'].invalid">Middle Name is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" formControlName="lastName" class="form-control" placeholder="Borsuk"
+                    [ngClass]="{ 'is-invalid': submitted && registerForm.controls['lastName'].invalid }" required/>
+                <div *ngIf="submitted && registerForm.controls['lastName'].invalid" class="invalid-feedback">
+                    <div *ngIf="registerForm.controls['lastName'].invalid">Last Name is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="telephone">Telephone</label>
+                <input type="tel" name="telephone" formControlName="telephone" class="form-control" placeholder="+380000000000"
+                    [ngClass]="{ 'is-invalid': submitted && registerForm.controls['telephone'].invalid }" required/>
+                <div *ngIf="submitted && registerForm.controls['telephone'].invalid" class="invalid-feedback">
+                    <div *ngIf="registerForm.controls['telephone'].invalid">First Name is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" formControlName="email" class="form-control" placeholder="dummymail@gmail.com"
+                    [ngClass]="{ 'is-invalid': submitted && registerForm.controls['email'].invalid }" required/>
+                <div *ngIf="submitted && registerForm.controls['email'].invalid" class="invalid-feedback">
+                    <div *ngIf="registerForm.controls['email'].invalid">First Name is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" formControlName="login" class="form-control" placeholder="aborsuk"
+                    [ngClass]="{ 'is-invalid': submitted && registerForm.controls['login'].invalid }" required/>
+                <div *ngIf="submitted && registerForm.controls['login'].invalid" class="invalid-feedback">
+                    <div *ngIf="registerForm.controls['login'].invalid">Username is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" formControlName="password" class="form-control" placeholder="BIGletter123"
+                    [ngClass]="{ 'is-invalid': submitted && registerForm.controls['password'].invalid }" required/>
+                <div *ngIf="submitted && registerForm.controls['password'].invalid" class="invalid-feedback">
+                    <div *ngIf="registerForm.controls['password'].invalid">Password must be at least 6 characters</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input class="btn btn--form" type="submit" value="Register" [disabled]="loading" />
+                <a routerLink="/login" class="signup__link">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+</div>

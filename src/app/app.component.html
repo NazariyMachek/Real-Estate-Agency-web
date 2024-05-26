@@ -1,0 +1,53 @@
+<!-- nav -->
+<!-- <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+  <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/">Home</a>
+      <a class="nav-item nav-link" (click)="logout()">Logout</a>
+  </div>
+</nav> -->
+<header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" routerLink="/home">Real<span class="special">Estate</span></a>
+    <div class="container-fluidcollapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/realtors">Realtors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/agencies">Agencies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about">About</a>
+          </li>
+        </ul>
+        <!-- Avatar -->
+      <li class="avatar nav-item dropdown">
+        <a class="nav-link dropdown-toggle d-flex align-items-center" [ngClass]="{'show' : showMenuEnabled}" id="navbarDropdownMenuLink"
+          role="button" data-mdb-toggle="dropdown" aria-expanded="false" (click)="showMenu()">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp" class="rounded-circle"
+            height="40" alt="Avatar" loading="lazy" />
+        </a>
+        <ul class="dropdown-menu" [ngClass]="{'show' : showMenuEnabled}" aria-labelledby="navbarDropdownMenuLink">
+          <li>
+            <a class="dropdown-item" (click)="goToProfilePage()">My profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item" (click)="goToEditPage()">Settings</a>
+          </li>
+          <li>
+            <a class="dropdown-item" (click)="logout()">Logout</a>
+          </li>
+        </ul>
+      </li>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+
+</header>
+<!-- main app container -->
+<router-outlet></router-outlet>

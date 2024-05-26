@@ -1,0 +1,30 @@
+<!-- <div class="card">
+    <img class="card-img-top" [src]="image" style="height: 200px; display: block;" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{offer.title}}</h5>
+      <p class="card-text">{{offer.description}}</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+</div> -->
+<div class="card" (click)="onCardClick()">
+  <div class="card-header">
+    <img [src]="image" alt="rover" />
+  </div>
+  <div class="card-body">
+    <span class="tag tag-teal">{{offerType}}</span>
+    <h4>
+      {{offer.title}}
+    </h4>
+    <p>
+      {{offer.description}}
+    </p>
+    <div class="user">
+      <img [src]="avatar" alt="user" />
+      <div class="user-info">
+        <h5>{{offer.price}}$</h5>
+        <small>{{currentUser?.login ?? 'anonymous'}}</small>
+      </div>
+    </div>
+    <a *ngIf="!!canEdit" routerLink="/editOffer/{{offer.id}}" class="btn btn-primary">Edit Offer</a>
+  </div>
+</div>

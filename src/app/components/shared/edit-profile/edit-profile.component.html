@@ -1,0 +1,57 @@
+<div class="one">
+    <h1>Hello, {{user.login}}</h1>
+</div>
+
+  <div id="profile-edit-area">
+    <div>
+    <div id="edit-area-left">
+        <table>
+          <tbody>
+            <tr>
+              <td class="edit-title">login:</td>
+              <td><input type="text" class="profileInputBox" [(ngModel)]="user.login" /></td>
+            </tr>
+            <tr>
+              <td class="edit-title">first name:</td>
+              <td><input type="text" class="profileInputBox" [(ngModel)]="user.firstname" /></td>
+            </tr>
+            <tr>
+              <td class="edit-title">middle name:</td>
+              <td><input type="text" class="profileInputBox" [(ngModel)]="user.middlename" /></td>
+            </tr>
+            <tr>
+              <td class="edit-title">last name:</td>
+              <td><input type="text" class="profileInputBox" [(ngModel)]="user.lastname" /></td>
+            </tr>
+            <tr>
+              <td class="edit-title">e-mail:</td>
+              <td><input type="email" class="profileInputBox" [(ngModel)]="user.email" /></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div id="edit-area-right">
+      <table>
+          <tbody>
+            <tr>
+              <td class="edit-title">phone:</td>
+              <td><input type="tel" class="profileInputBox" [(ngModel)]="user.telephone"/></td>
+            </tr>
+            <tr>
+                <td class="edit-title">password:</td>
+                <td><input type="password" class="profileInputBox" [(ngModel)]="password"/></td>
+            </tr>
+            <tr>
+                <td class="edit-title">confirm password:</td>
+                <td><input type="password" class="profileInputBox" [(ngModel)]="confirmedPassword"/></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+</div>
+  </div>
+
+  <div id="profile-edit-save">
+    <button id="editSave" (click)="saveEditedUser()">Save Changes</button>
+    <button id="editSave" (click)="goToHomePage()">Cancel</button>
+  </div>

@@ -1,0 +1,178 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+.w3-container, .w3-panel {
+    padding: 0.01em 16px;
+}
+
+.w3-text-green, .w3-hover-text-green:hover {
+    font-family: 'Exo', sans-serif;
+    color: #8c5434!important;
+    font-weight: 400;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Exo', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Exo', sans-serif;
+    font-weight: 100;
+    margin: 10px 0;
+}
+
+element.style {
+    display: block;
+}
+
+.w3-tooltip, .w3-display-container {
+    position: relative;
+}
+
+.w3-black, .w3-hover-black:hover {
+    color: #fff!important;
+    background-color: #000!important;
+}
+
+.w3-container, .w3-panel {
+    padding: 0.01em 16px;
+}
+
+.w3-display-bottomleft {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.w3-section, .w3-code {
+    margin-top: 16px!important;
+    margin-bottom: 16px!important;
+}
+
+.w3-row-padding, .w3-row-padding>.w3-half, .w3-row-padding>.w3-third, .w3-row-padding>.w3-twothird, .w3-row-padding>.w3-threequarter, .w3-row-padding>.w3-quarter, .w3-row-padding>.w3-col {
+    padding: 0 8px;
+    display: flex;
+}
+
+
+.w3-col, .w3-half, .w3-third, .w3-twothird, .w3-threequarter, .w3-quarter {
+    
+}
+
+.w3-opacity, .w3-hover-opacity:hover {
+    opacity: 0.60;
+}
+
+.shownImage {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.big-image {
+    width: 1075px;
+    height: 600px;
+    object-fit:cover;
+}
+
+.smallImage {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 10px;
+    opacity: 0.6;
+}
+
+.w3-main {
+    display: flex;
+}
+
+.right-container {
+    margin-top: 70px;
+}
+
+span {
+    font-weight: 300;
+}
+
+.w3-large {
+    font-size: 18px!important;
+}
+
+.amenities {
+    display: flex;
+}
+
+.amenities-fit {
+    margin-right: 6em;
+}
+
+.fa-margin {
+    margin-right: 10px;
+}
+
+.form-control {
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: .0625rem solid #ccc;
+    border-radius: .25rem;
+}
+.form-control {
+    background-color: transparent;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+
+    &:focus {
+        border-color: #111;
+    }
+}
+.btn--form {
+    padding: .5rem 2.5rem;
+    font-size: .95rem;
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    background: #111;
+    border-radius: remy(35px);
+    margin-right: 10px;
+
+    &:focus,
+    &:hover {
+        background: lighten(#111, 13%);
+    }
+}
+
+.preferences {
+    background-color: rgb(116, 24, 24) !important;
+
+    &:focus,
+&:hover {
+    background: lighten(rgb(93, 16, 16), 30%) !important;
+}
+}
+.reviews {
+    margin-bottom: 10%;
+}
+
+
+
+// .fa-male:before {
+//     content: "\f183";
+// }
+
+// .fa-bathtub:before, .fa-s15:before, .fa-bath:before {
+//     content: "\f2cd";
+// }
+
+// .fa-hotel:before, .fa-bed:before {
+//     content: "\f236";
+// }

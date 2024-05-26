@@ -1,0 +1,12 @@
+<div class="one">
+    <h1>Your favorite offers!</h1>
+</div>
+
+<div class="container card-container" *ngIf="favoriteOffers.length">
+    <app-offer-card *ngFor="let offer of favoriteOffers" [offer]="offer"></app-offer-card>
+</div>
+
+<div *ngIf="!favoriteOffers.length" class="empty">
+    <p>There are no preferences yet!</p>
+    <a class="btn btn--form preferences" routerLink="/offers">Go to Offers list</a>
+</div>

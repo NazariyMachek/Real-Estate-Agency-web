@@ -1,0 +1,121 @@
+<div class="w3-main w3-white" style="margin-left:260px; margin-right: 260px;">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:80px"></div>
+
+  <!-- Slideshow Header -->
+  <div>
+    <div class="w3-container" id="apartment">
+      <h2 class="w3-text-green">{{offer.title}}</h2>
+      <div class="w3-display-container mySlides" [ngClass]="{'shownImage' : isLivingRoomShown}"
+        [ngClass]="{'hide' : !isLivingRoomShown}">
+        <img [src]="imagesArray.at(5)" class="big-image">
+        <div class="w3-display-bottomleft w3-container w3-black">
+          <p>Living Room</p>
+        </div>
+      </div>
+      <div class="w3-display-container mySlides" [ngClass]="{'shownImage' : isDiningRoomShown}"
+        [ngClass]="{'hide' : !isDiningRoomShown}">
+        <img [src]="imagesArray.at(6)" class="big-image">
+        <div class="w3-display-bottomleft w3-container w3-black">
+          <p>Dining Room</p>
+        </div>
+      </div>
+      <div class="w3-display-container mySlides" [ngClass]="{'shownImage' : isBedroomRoomShown}"
+        [ngClass]="{'hide' : !isBedroomRoomShown}">
+        <img [src]="imagesArray.at(7)" class="big-image">
+        <div class="w3-display-bottomleft w3-container w3-black">
+          <p>Bedroom</p>
+        </div>
+      </div>
+      <div class="w3-display-container mySlides" [ngClass]="{'shownImage' : isLivingRoom2Shown}"
+        [ngClass]="{'hide' : !isLivingRoom2Shown}">
+        <img [src]="imagesArray.at(8)" class="big-image">
+        <div class="w3-display-bottomleft w3-container w3-black">
+          <p>Living Room II</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-row-padding w3-section">
+      <div class="w3-col s3">
+        <img class="demo w3-opacity w3-hover-opacity-off" [src]="imagesArray.at(5)" class="smallImage"
+          title="Living room" (click)="showLivingRoom()">
+      </div>
+      <div class="w3-col s3">
+        <img class="demo w3-opacity w3-hover-opacity-off" [src]="imagesArray.at(6)" class="smallImage"
+          title="Dining room" (click)="showDiningRoom()">
+      </div>
+      <div class="w3-col s3">
+        <img class="demo w3-opacity w3-hover-opacity-off" [src]="imagesArray.at(7)" class="smallImage" title="Bedroom"
+          (click)="showBedroom()">
+      </div>
+      <div class="w3-col s3">
+        <img class="demo w3-opacity w3-hover-opacity-off" [src]="imagesArray.at(8)" class="smallImage"
+          title="Second Living Room" (click)="showLivingRoom2()">
+      </div>
+    </div>
+    <!-- Contact -->
+    <div class="w3-container" id="contact">
+      <h2>Contact us!</h2>
+      <i class="fa fa-phone" style="width:30px"></i> {{offerOwner.telephone}}<br>
+      <i class="fa fa-envelope" style="width:30px"> </i> {{offerOwner.email}}<br>
+      <p>Questions? Go ahead, ask them:</p>
+      <form>
+        <div style="display: flex;">
+          <p><input class="w3-input w3-border form-control" type="text" placeholder="Message" required name="Message"
+              [(ngModel)]="reviewMessage"></p>
+        </div>
+        <input class="btn btn--form" type="submit" value="Send a message" (click)="onSendMessageSubmit()" />
+        <input class="btn btn--form preferences" type="submit" value="Add to preferences"
+          (click)="addOfferToPreferences()" />
+      </form>
+    </div>
+
+    <hr>
+    <div class="reviews">
+      <div *ngFor="let review of reviews">
+        <app-review-card [review]="review"></app-review-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="right-container">
+    <div class="w3-container">
+      <h4><strong>The space</strong> — <span>{{offer.square}} square meters</span></h4>
+      <div class="w3-row w3-large">
+        <div class="w3-col s6">
+          <p><i class="fa fa-fw fa-male"></i> Max people: 4</p>
+          <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 2</p>
+          <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 1</p>
+        </div>
+        <hr>
+
+        <h4><strong>Amenities</strong></h4>
+        <div class="w3-row w3-large amenities">
+          <div class="w3-col s6 amenities-fit">
+            <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+            <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+            <p><i class="fa fa-fw fa-tv"></i> TV</p>
+          </div>
+          <div class="w3-col s6">
+            <p><i class="fa fa-fw fa-cutlery"></i> Kitchen</p>
+            <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
+            <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
+          </div>
+        </div>
+        <hr>
+
+        <h4><strong>Extra Info</strong></h4>
+        <p>{{offer.description}}</p>
+        <p>We accept: <i class="fa fa-credit-card w3-large fa-margin"></i> <i
+            class="fa fa-cc-mastercard w3-large fa-margin"></i> <i class="fa fa-cc-amex w3-large fa-margin"></i> <i
+            class="fa fa-cc-cc-visa w3-large fa-margin"></i><i class="fa fa-cc-paypal w3-large fa-margin"></i></p>
+        <hr>
+      </div>
+
+    </div>
+
+
+
+    <!-- End page content -->
+  </div>
